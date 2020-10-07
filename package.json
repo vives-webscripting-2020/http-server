@@ -4,7 +4,8 @@
   "description": "A simple HTTP server written in TypeScript",
   "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./src/server.ts"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/vives-webscripting-2020/http-server/issues"
   },
-  "homepage": "https://github.com/vives-webscripting-2020/http-server#readme"
+  "homepage": "https://github.com/vives-webscripting-2020/http-server#readme",
+  "dependencies": {
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  }
 }
