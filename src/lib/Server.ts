@@ -9,7 +9,14 @@ export default class Server {
     this.server = net.createServer( (client) => {
       client.on('data', this.onData)
       console.log('client connected')
-      client.write('http/1.1 200 OK\r\n\r\n<h1>Yooo</h1>')
+      const content = '<h1>This is a proper response</h1>'
+      const statusCode = 200
+      const headers = {
+        ContentType: "text/html"
+        ContentLanguage: "en"
+      }
+      const response = new Response({ statusCode, headers, content })
+      client.write(response.toString())
       client.end()
     })
     console.log('*** HTTP Server started ***')
