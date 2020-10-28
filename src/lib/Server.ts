@@ -12,7 +12,7 @@ export default class Server {
       const content = '<h1>This is a proper response</h1>'
       const statusCode = 200
       const headers = {
-        ContentType: "text/html"
+        ContentType: "text/html",
         ContentLanguage: "en"
       }
       const response = new Response({ statusCode, headers, content })
